@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+/* ------------------------------------- VARIABLES ------------------------------------- */
+:root{
+  --font: 'Quicksand', sans-serif;
+  --color-dark-blue: #151B31;
+  --color-white: #fff;
+  --color-gray: #888B8E;
+  --color-black: #555;
+  --color-blue:#303B6B;
+  --color-red: #E01622;
+  --color-pink: #ED3084;
+  --color-gradient: linear-gradient(to right, #E01622, #ED3084);
+}
+/* ------------------------------------- GENERALS RULES ------------------------------------- */
+body {
+  margin: 0;
+  font-family: var(--font);
+  overflow-x: hidden;
+}
+figure{
+  margin: 0;
+}
+/* ------------------------------------- HOME LAYOUT RULES ------------------------------------- */
+.home {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 320px 1fr;
+  grid-template-rows: 1fr 0;
+  grid-template-areas:  "sidebar primary"
+                        "sidebar featuring";
+}
+.home.search-active {
+  grid-template-rows: 1fr 245px;
+}
+.home-sidebar {
+  grid-area: sidebar;
+  z-index: 10;
+}
+.home-primary {
+  grid-area: primary;
+}
+.home-featuring {
+  grid-area: featuring;
+  display: grid;
+}
+.home-featuring img {
+  align-self: center;
+  justify-self: center;
+}
+.sidebarPlaylist::-webkit-scrollbar, 
+.primary-list::-webkit-scrollbar,
+.primaryPlaylist-list::-webkit-scrollbar{
+  width: 8px;
+  height: 8px;
+}
+.sidebarPlaylist::-webkit-scrollbar-thumb, 
+.primary-list::-webkit-scrollbar-thumb,
+.primaryPlaylist-list::-webkit-scrollbar-thumb{
+  background: var(--color-blue);
+  border-radius: 8px;
+}
+/* ------------------------------------- SIDEBAR RULES ------------------------------------- */
+.sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  background: var(--color-dark-blue);
+  color: var(--color-white);
+  padding: 1em;
+  border-right: 1px solid var(--color-blue);
+  box-sizing: border-box;
+  height: 100vh;
+}
+.div-logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .1 ease-in;
+  margin-left: -15px;
+}
+.div-logo:hover h1, .primary-user button:hover{
+  text-shadow: 0px 0px 8px var(--color-white);
+}
+.div-logo:hover .text{
+  text-shadow: 0px 0px 8px var(--color-red);
+}
+.div-logo img{
+  width: 40px;
+  margin-right: 10px;
+}
+.sidebar h1, .text{
+  font-size: 40px;
+  font-weight: bold;
+}
+.sidebar span{
+  background: var(--color-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.sidebarPlaylist {
+  overflow: auto;
+}
+.sidebarPlaylist-title{
+  text-shadow: 0px 0px 3px var(--color-white);
+}
+/* ------------------------------------- SIDEBAR MY PLAYLIST RULES ------------------------------------- */
+.myPlaylist {
+  padding: 10px 30px;
+}
+.myPlaylist-item, .playlistFriends-item{
+  padding: 10px 2px;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+.myPlaylist-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  display: block;
+}
+.myPlaylist-item:last-child a {
+  margin-bottom: 0;
+}
+.myPlaylist-item:hover, .playlistFriends-item:hover{
+  background: var(--color-blue);
+}
+/* ------------------------------------- SIDEBAR PLAYLIST FRIENDS RULES ------------------------------------- */
+.playlistFriends {
+  padding: 10px 15px;
+}
+.playlistFriends-item {
+  color: white;
+}
+.playlistFriends-item {
+  display: flex;
+  margin-bottom: 12px;
+  padding: 5px 0px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.playlistFriends-item a {
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+.playlistFriends-item img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+/* ------------------------------------- HOME PRIMARY RULES  ------------------------------------- */
+.home-primary {
+  display: grid;
+  grid-template-areas: "header header"
+                        "list list";
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 300px 1fr;
+  overflow: auto;
+}
+/* ------------------------------------- HEADER RULES  ------------------------------------- */
+.header{
+  background: var(--color-dark-blue);
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 1.3rem;
+}
+/* ------------------------------------- MENU BUTTON RULES ------------------------------------- */
+.menu{
+  display: none;
+}
+.menu button, .close-menu button{
+  background: var(--color-gradient);
+  border: none;
+  border-radius: 100%;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+  outline: none;
+}
+.menu button img, .close-menu button img{
+  width: 30px;
+}
+.close-menu{
+  position: fixed;
+  transition: all 0.3s ease-in;
+  top: 100px;
+  right: -80px;
+  z-index: 10;
+}
+.close-menu.active{
+  right: 10px;
+}
+/* ------------------------------------- PRIMARY-SEARCH RULES ------------------------------------- */
+.primary-search {
+  width: 70%;
+  justify-self: self-start;
+}
+.search{
+  width: 100%;
+}
+.search input {
+  background: #f0f0f0;
+  font-family: var(--font);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  width: inherit;
+  border: none;
+  box-shadow: 0 0 10px #f0f0f0;
+  box-sizing: border-box;
+  outline: none;
+}
+/* ------------------------------------- PRIMARY-USER RULES  ------------------------------------- */
+.primary-user {
+  justify-self: end;
+  margin: 5px 0;
+  cursor: pointer;
+}
+.user button {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--color-white);
+  font-weight: 300;
+  margin: 0;
+}
+.user img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+/* ------------------------------------- PRIMARY-LIST RULES ------------------------------------- */
+.primary-list {
+  grid-area: list;
+  padding: 10px;
+  overflow: auto;
+}
+/* ------------------------------------- PRIMARY-PLAYLIST RULES ------------------------------------- */
+.primaryPlaylist-topic {
+  margin: 15px 0 0;
+  color: var(--color-gray);
+  font-size: 14px;
+  font-weight: 300;
+}
+.primaryPlaylist-title {
+  margin: 0 0 15px;
+  color: var(--color-black);
+  font-size: 26px;
+  font-weight: bold;
+}
+.primaryPlaylist-list {
+  display: flex;
+  overflow: auto;
+}
+.primaryPlaylistItem {
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.primaryPlaylistItem img {
+  width: 170px;
+  height: 256px;
+  border-radius: 12px;
+  margin-right: 25px;
+  object-fit: cover;
+  transition: all .2s ease-in;
+}
+.primaryPlaylistItem:hover img{
+  transform: scale(1.02);
+  box-shadow: -1px 2px 35px -5px var(--color-blue);
+}
+.primaryPlaylistItem-title {
+  margin: 5px 0;
+  color: var(--color-black);
+  font-size: 14px;
+  font-weight: bold;
+}
+/* ------------------------------------- MOVIE-SEARCH RULES ------------------------------------- */
+.movieSearch {
+  background: var(--color-blue);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.movie-close{
+  width: 100%;
+  padding-right: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.movie-close-button{
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.movie-close-button img{
+  width: 3rem;
+}
+.movie-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.movieSearch-image {
+  margin-right: 20px;
+  margin-top: 5px;
+}
+.movieSearch-image img{
+  border-radius: 12px;
+}
+.movieSearch-title {
+  margin: 10px;
+}
+.movieSearch-album {
+  font-size: 1.3em;
+  margin: 10px;
+}
+/* ------------------------------------- ANIMATIONS ------------------------------------- */
+.fadeIn {
+  animation: 3000ms fadeIn;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
