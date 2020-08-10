@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Platzi Video</title>
+  <link rel="icon" type="image/png" href="src/images/platzi-logo.png">
+  <link rel="stylesheet" href="src/css/home.css" />
+  <link rel="stylesheet" href="src/css/modal.css" />
+  <link rel="stylesheet" href="src/css/responsive.css" />
+</head>
+<body>
+  <section class="home" id="home">
+    <div id="home-sidebar" class="home-sidebar">
+      <div class="sidebar">
+        <div class="div-logo">
+          <figure><img src="./src/images/platzi-logo.png" alt="platzi-logo"></figure>
+          <h1>Platzi</h1>
+          <span class="text">Video</span>
+        </div>
+        <div class="sidebarPlaylist">
+          <h2 class="sidebarPlaylist-title">Mis pelis Favoritas</h2>
+          <ol class="myPlaylist">
+
+          </ol>
+        </div>
+        <div class="sidebarPlaylist">
+          <h2 class="sidebarPlaylist-title">Lista de amigos</h2>
+          <ul class="playlistFriends">
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="home-primary">
+      <!-- <section class="primary"> -->
+        <div class="header">
+          <div class="menu">
+            <button class="burger-button"><figure><img src="src/images/menu.png" alt="menu"></figure></button>
+          </div>
+          <div class="primary-search">
+            <form action="" class="search" id="form">
+              <input type="text" name="name" placeholder="Buscar tu película favorita"/>
+            </form>
+          </div>
+          <div class="primary-user">
+            <div class="user">
+              <button id="user-button">
+                <img src="src/images/perfil.jpg" alt=""/>
+                <span>Cristian Patiño</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="close-menu" class="close-menu">
+          <button class="close-button"><figure><img src="src/images/close-menu.png" alt="close-menu"></figure></button>
+        </div>
+        <div class="primary-list">
+          <div class="primaryPlaylist">
+            <h3 class="primaryPlaylist-topic">A los golpes</h3>
+            <h2 class="primaryPlaylist-title">Acción</h2>
+            <div class="primaryPlaylist-list" id="action">
+              <img src="src/images/loader.gif" width="70" height="70" alt="">
+            </div>
+          </div>
+          <div class="primaryPlaylist">
+            <h3 class="primaryPlaylist-topic">Para no dormir</h3>
+            <h2 class="primaryPlaylist-title">Terror</h2>
+            <div class="primaryPlaylist-list" id="terror">
+              <img src="src/images/loader.gif" width="70" height="70" alt="">
+            </div>
+          </div>
+          <div class="primaryPlaylist">
+            <h3 class="primaryPlaylist-topic">Dibujitos animados</h3>
+            <h2 class="primaryPlaylist-title">Animación</h2>
+            <div class="primaryPlaylist-list" id="animation">
+              <img src="src/images/loader.gif" width="70" height="70" alt="">
+            </div>
+          </div>
+        </div>
+      <!-- </section> -->
+    </div>
+    <div class="home-featuring" id="featuring">
+      
+    </div>
+  </section>
+  <div class="overlay" id="overlay">
+  </div>
+  <div class="modal" id="modal">
+    <img src="" alt="" width="130" height="190">
+    <h1>Título de pelicula</h1>
+    <div class="modal-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione impedit maiores enim alias ex accusantium quasi cum autem, nam, voluptas tenetur laudantium quod! Odit voluptate illo, voluptas vel quia, quae.</p>
+    </div>
+    <div class="modal-buttons">
+      <button class="modal-btn primary" id="hide-modal">Cerrar Modal</button>
+    </div>
+  </div>
+  <div class="modalUser" id="modalUser">
+    <div class="modalUser-buttons">
+      <button id="modalUser-btn-close" class="modalUser-btn-close" id="hide-modalUser"><img src="src/images/close.png" alt="github"></button>
+    </div>
+    <figure><img class="img-user" src="src/images/perfil2.jpg" alt="perfil2"></figure>
+    <h1>Hola soy Cristian Felipe Patiño Cáceres</h1>
+      <h2>Ingeniero de Sistemas de la Universidad Distrital de Colombia.</h2>
+    <div class="social-media">
+      <h3>Sígueme:</h3>
+      <div class="redes">
+        <a href="https://github.com/CrissUD" target="_blank"><img src="src/images/github.png" alt="github"></a>
+        <a href="https://www.youtube.com/user/themetallica096" target="_blank"><img src="src/images/youtube.png" alt="youtube"></a>
+        <a href="https://www.facebook.com/cristian.kema" target="_blank"><img src="src/images/facebook.png" alt="facebook"></a>
+        <a href="https://www.instagram.com/cristiankema/" target="_blank"><img src="src/images/instagram.png" alt="instagram"></a>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="src/js/home.js"></script>
+</body>
+</html>
