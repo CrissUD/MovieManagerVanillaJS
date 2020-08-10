@@ -1,1 +1,6 @@
 /resources
+/src/js/Async.js
+/src/js/localStorage.js
+/src/js/promesas.js
+/src/js/templates.js
+/src/js/selectores.js
