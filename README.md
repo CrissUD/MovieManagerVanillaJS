@@ -22,7 +22,7 @@ Dentro del curso se implementan varias características de HTML, CSS y JavaScrip
 
 # Resultado
 
-A continuación se muestra el resultado de la **Aplicación de muestra de películas unicamente usando JavaScript (Vanilla JS)**, si quiere ver la pagina por usted mismo puede entrar al [siguiente link](https://crissud.github.io/PortafolioWebResponsiveDesign/).
+A continuación se muestra el resultado de la **Aplicación de muestra de películas unicamente usando JavaScript (Vanilla JS)**, si quiere ver la pagina por usted mismo puede entrar al [siguiente link](https://crissud.github.io/MovieManagerVanillaJS/).
 
 ## Version Desktop
 
