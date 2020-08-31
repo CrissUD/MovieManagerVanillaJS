@@ -1,0 +1,24 @@
+{
+  "name": "vanillajs",
+  "version": "1.0.0",
+  "description": "Vanilla Js with Post CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrissUD/MovieManagerVanillaJS.git"
+  },
+  "author": "Cristian Patiño CrissUD",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CrissUD/MovieManagerVanillaJS/issues"
+  },
+  "homepage": "https://github.com/CrissUD/MovieManagerVanillaJS#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "postcss-cli": "^7.1.1",
+    "postcss-preset-env": "^6.7.0"
+  }
+}
