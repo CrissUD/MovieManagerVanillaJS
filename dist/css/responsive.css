@@ -1,7 +1,6 @@
 @custom-media —mobile screen and (max-width: 480px);
-@custom-media --small screen and (width < 768px);
-@custom-media —medium screen and (width >= 768px);
-@custom-media —large screen and (width >= 1024px);
+@custom-media —medium screen and (min-width: 768px);
+@custom-media —large screen and (min-width: 1024px);
 
 @media(max-width: 1028px){
 
@@ -11,8 +10,9 @@
 }
 @media(max-width: 769px){
     .home {
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-        grid-template-areas:    "primary primary"
+            grid-template-areas:    "primary primary"
                                 "featuring featuring";
     }
     .home-sidebar {

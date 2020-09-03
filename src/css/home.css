@@ -2,14 +2,15 @@
 /* ------------------------------------- VARIABLES ------------------------------------- */
 :root{
   --font: 'Quicksand', sans-serif;
-  --color-dark-blue: #151B31;
   --color-white: #fff;
   --color-gray: #888B8E;
   --color-black: #555;
   --color-blue:#303B6B;
+  --color-dark-blue: #151B31;
   --color-red: #E01622;
   --color-pink: #ED3084;
   --color-gradient: linear-gradient(to right, #E01622, #ED3084);
+  --font-size: 16px;
 }
 /* ------------------------------------- GENERALS RULES ------------------------------------- */
 body {
@@ -204,14 +205,14 @@ figure{
   width: 100%;
 }
 .search input {
-  background: #f0f0f0;
+  background: var(--color-white);
   font-family: var(--font);
   padding: 10px;
   border-radius: 10px;
   font-size: 16px;
   width: inherit;
   border: none;
-  box-shadow: 0 0 10px #f0f0f0;
+  box-shadow: 0 0 10px var(--color-white);
   box-sizing: border-box;
   outline: none;
 }
