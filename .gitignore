@@ -1,7 +1,7 @@
 /node_modules
 /resources
-/src/js/Async.js
-/src/js/localStorage.js
-/src/js/promesas.js
-/src/js/templates.js
-/src/js/selectores.js
+/src/js/resources/Async.js
+/src/js/resources/localStorage.js
+/src/js/resources/promesas.js
+/src/js/resources/templates.js
+/src/js/resources/selectores.js
