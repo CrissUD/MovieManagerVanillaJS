@@ -1,0 +1,79 @@
+/* ------------------------------------- HEADER RULES  ------------------------------------- */
+.header{
+  background: var(--color-dark-blue);
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 1.3rem;
+}
+/* ------------------------------------- MENU BUTTON RULES ------------------------------------- */
+.menu{
+  display: none;
+}
+.menu button, .close-menu button{
+  background: var(--color-gradient);
+  border: none;
+  border-radius: 100%;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+  outline: none;
+}
+.menu button img, .close-menu button img{
+  width: 30px;
+}
+.close-menu{
+  position: fixed;
+  transition: all 0.3s ease-in;
+  top: 100px;
+  right: -80px;
+  z-index: 10;
+}
+.close-menu.active{
+  right: 10px;
+}
+/* ------------------------------------- PRIMARY-SEARCH RULES ------------------------------------- */
+.primary-search {
+  width: 70%;
+  justify-self: self-start;
+}
+.search{
+  width: 100%;
+}
+.search input {
+  background: var(--color-white);
+  font-family: var(--font);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  width: inherit;
+  border: none;
+  box-shadow: 0 0 10px var(--color-white);
+  box-sizing: border-box;
+  outline: none;
+}
+/* ------------------------------------- PRIMARY-USER RULES  ------------------------------------- */
+.primary-user {
+  justify-self: end;
+  margin: 5px 0;
+  cursor: pointer;
+}
+.user button {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--color-white);
+  font-weight: 300;
+  margin: 0;
+}
+.user img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}

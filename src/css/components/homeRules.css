@@ -1,0 +1,49 @@
+/* ------------------------------------- HOME LAYOUT RULES ------------------------------------- */
+.home {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 320px 1fr;
+  grid-template-rows: 1fr 0;
+  grid-template-areas:  "sidebar primary"
+                        "sidebar featuring";
+}
+.home.search-active {
+  grid-template-rows: 1fr 245px;
+}
+.home-sidebar {
+  grid-area: sidebar;
+  z-index: 10;
+}
+.home-primary {
+  grid-area: primary;
+}
+.home-featuring {
+  grid-area: featuring;
+  display: grid;
+}
+.home-featuring img {
+  align-self: center;
+  justify-self: center;
+}
+.sidebarPlaylist::-webkit-scrollbar, 
+.primary-list::-webkit-scrollbar,
+.primaryPlaylist-list::-webkit-scrollbar{
+  width: 8px;
+  height: 8px;
+}
+.sidebarPlaylist::-webkit-scrollbar-thumb, 
+.primary-list::-webkit-scrollbar-thumb,
+.primaryPlaylist-list::-webkit-scrollbar-thumb{
+  background: var(--color-blue);
+  border-radius: 8px;
+}
+
+/* ------------------------------------- HOME PRIMARY RULES  ------------------------------------- */
+.home-primary {
+  display: grid;
+  grid-template-areas: "header header"
+                        "list list";
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 300px 1fr;
+  overflow: auto;
+}

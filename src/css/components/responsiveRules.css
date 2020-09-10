@@ -1,18 +1,7 @@
-@custom-media —mobile screen and (max-width: 480px);
-@custom-media —medium screen and (min-width: 768px);
-@custom-media —large screen and (min-width: 1024px);
-
-@media(max-width: 1028px){
-
-}
-@media(max-width: 1025px){
-
-}
 @media(max-width: 769px){
     .home {
-        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-            grid-template-areas:    "primary primary"
+        grid-template-areas:    "primary primary"
                                 "featuring featuring";
     }
     .home-sidebar {
@@ -44,7 +33,4 @@
     .modal{
         padding-top: 220px;
     }
-}
-@media(max-width: 320px){
-
 }

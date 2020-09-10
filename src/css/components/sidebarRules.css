@@ -1,0 +1,92 @@
+/* ------------------------------------- SIDEBAR RULES ------------------------------------- */
+.sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  background: var(--color-dark-blue);
+  color: var(--color-white);
+  padding: 1em;
+  border-right: 1px solid var(--color-blue);
+  box-sizing: border-box;
+  height: 100vh;
+}
+.div-logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .1 ease-in;
+  margin-left: -15px;
+}
+.div-logo:hover h1, .primary-user button:hover{
+  text-shadow: 0px 0px 8px var(--color-white);
+}
+.div-logo:hover .text{
+  text-shadow: 0px 0px 8px var(--color-red);
+}
+.div-logo img{
+  width: 40px;
+  margin-right: 10px;
+}
+.sidebar h1, .text{
+  font-size: 40px;
+  font-weight: bold;
+}
+.sidebar span{
+  background: var(--color-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.sidebarPlaylist {
+  overflow: auto;
+}
+.sidebarPlaylist-title{
+  text-shadow: 0px 0px 3px var(--color-white);
+}
+/* ------------------------------------- SIDEBAR MY PLAYLIST RULES ------------------------------------- */
+.myPlaylist {
+  padding: 10px 30px;
+}
+.myPlaylist-item, .playlistFriends-item{
+  padding: 10px 2px;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+.myPlaylist-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  display: block;
+}
+.myPlaylist-item:last-child a {
+  margin-bottom: 0;
+}
+.myPlaylist-item:hover, .playlistFriends-item:hover{
+  background: var(--color-blue);
+}
+/* ------------------------------------- SIDEBAR PLAYLIST FRIENDS RULES ------------------------------------- */
+.playlistFriends {
+  padding: 10px 15px;
+}
+.playlistFriends-item {
+  color: white;
+}
+.playlistFriends-item {
+  display: flex;
+  margin-bottom: 12px;
+  padding: 5px 0px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.playlistFriends-item a {
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+.playlistFriends-item img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}

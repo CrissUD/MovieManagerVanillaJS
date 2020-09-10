@@ -1,0 +1,46 @@
+/* ------------------------------------- PRIMARY-LIST RULES ------------------------------------- */
+.primary-list {
+  grid-area: list;
+  padding: 10px;
+  overflow: auto;
+}
+/* ------------------------------------- PRIMARY-PLAYLIST RULES ------------------------------------- */
+.primaryPlaylist-topic {
+  margin: 15px 0 0;
+  color: var(--color-gray);
+  font-size: 14px;
+  font-weight: 300;
+}
+.primaryPlaylist-title {
+  margin: 0 0 15px;
+  color: var(--color-black);
+  font-size: 26px;
+  font-weight: bold;
+}
+.primaryPlaylist-list {
+  display: flex;
+  overflow: auto;
+}
+.primaryPlaylistItem {
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.primaryPlaylistItem img {
+  width: 170px;
+  height: 256px;
+  border-radius: 12px;
+  margin-right: 25px;
+  object-fit: cover;
+  transition: all .2s ease-in;
+}
+.primaryPlaylistItem:hover img{
+  transform: scale(1.02);
+  box-shadow: -1px 2px 35px -5px var(--color-blue);
+}
+.primaryPlaylistItem-title {
+  margin: 5px 0;
+  color: var(--color-black);
+  font-size: 14px;
+  font-weight: bold;
+}

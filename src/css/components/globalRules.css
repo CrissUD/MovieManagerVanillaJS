@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+/* ------------------------------------- VARIABLES ------------------------------------- */
+:root{
+  --font: 'Quicksand', sans-serif;
+  --color-white: #fff;
+  --color-gray: #888B8E;
+  --color-black: #555;
+  --color-blue:#303B6B;
+  --color-dark-blue: #151B31;
+  --color-red: #E01622;
+  --color-pink: #ED3084;
+  --color-gradient: linear-gradient(to right, #E01622, #ED3084);
+  --font-size: 16px;
+}
+/* ------------------------------------- GENERALS RULES ------------------------------------- */
+body {
+  margin: 0;
+  font-family: var(--font);
+  overflow-x: hidden;
+}
+figure{
+  margin: 0;
+}
+
+/* ------------------------------------- ANIMATIONS ------------------------------------- */
+.fadeIn {
+  animation: 3000ms fadeIn;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

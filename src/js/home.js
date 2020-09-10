@@ -128,6 +128,7 @@ const PERSON_URL = 'https://randomuser.me/api/';
 
   $form.addEventListener('submit', async event =>{
     event.preventDefault();
+    $featuringContainer.style.display = "flex";
     $featuringContainer.innerHTML = '';
     $home.classList.add('search-active');
     const $loader = document.createElement('img');
@@ -140,7 +141,10 @@ const PERSON_URL = 'https://randomuser.me/api/';
     const HTMLString = movieSearchTemplate(movies[0]);
     $featuringContainer.innerHTML = HTMLString;
     const $closeButton = $featuringContainer.querySelector('.movie-close-button');
-    $closeButton.addEventListener('click', () => $home.classList.remove('search-active'));
+    $closeButton.addEventListener('click', () => {
+      $home.classList.remove('search-active')
+      $featuringContainer.style.display = "none";
+    });
     }catch (error){
       alert(`La película "${data.get('name')}" no fue encontrada`);
       $loader.remove();
